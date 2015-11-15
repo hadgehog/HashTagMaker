@@ -1,0 +1,2 @@
+C:\Users\vladi\Desktop\HashTagMaker\HashTagMaker\HashTagMaker.Windows\HashTagMaker.Windows.csproj;x86
+C:\Users\vladi\Desktop\HashTagMaker\HashTagMakerNativeLibs\HashTagMakerNativeLibs.Windows\HashTagMakerNativeLibs.Windows.vcxproj;x86

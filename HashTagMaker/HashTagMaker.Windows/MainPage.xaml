@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="HashTagMaker.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HashTagMaker"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/Skins/dark_low_contrast.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <TextBox Name="MainTxtbx" ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                 Margin="20,20,20,100" Background="Transparent" BorderBrush="Transparent"
+                 FontSize="46" Foreground="White" FontWeight="SemiBold" TextWrapping="Wrap" TextAlignment="Justify" 
+                 Text="Input your sentence and press #hashtag button" IsTapEnabled="True" Tapped="MainTxtbx_Tapped"/>
+    </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar Opacity="0.8" Visibility="Visible">
+            <AppBarButton Label="clear" Icon="Clear" Name="ClearBtn" Click="ClearBtn_Click"/>
+            <AppBarButton Label="copy" Icon="Copy" Name="CopyBtn" Click="CopyBtn_Click"/>
+            <AppBarButton Label="unteg!" Name="UntegBtn" Click="UntegBtn_Click">
+                <AppBarButton.Icon>
+                    <BitmapIcon UriSource="Assets/Icons/dark/appbar.undo.png"/>
+                </AppBarButton.Icon>
+            </AppBarButton>
+            <AppBarButton Label="#hashtag!" Name="HashTagBtn" Click="HashTagBtn_Click">
+                <AppBarButton.Icon>
+                    <BitmapIcon UriSource="Assets/Icons/dark/appbar.social.twitter.hashtag.png"/>
+                </AppBarButton.Icon>
+            </AppBarButton>
+
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="save" Icon="Save" Name="SaveBtn" Click="SaveBtn_Click"/>
+                <AppBarButton Label="load" Name="LoadBtn" Click="LoadBtn_Click">
+                    <AppBarButton.Icon>
+                        <BitmapIcon UriSource="Assets/Icons/dark/appbar.folder.open.png"/>
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton Label="export" Icon="Upload" Name="ExportBtn" Click="ExportBtn_Click" />
+                <AppBarButton Label="favorits" Icon="Favorite" Name="FavoriteBtn" Click="FavoriteBtn_Click" />
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
